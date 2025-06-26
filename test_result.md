@@ -122,15 +122,18 @@ backend:
 
   - task: "Shopping Cart API"
     implemented: true
-    working: "unknown"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "unknown"
         agent: "main"
         comment: "Implemented full shopping cart API including add to cart, get cart, update quantities, remove items, and clear cart functionality."
+      - working: true
+        agent: "testing"
+        comment: "All shopping cart operations work correctly. Successfully tested: POST /api/cart/add to add items, GET /api/cart to retrieve cart with items and total, PUT /api/cart/update/{product_id} to update quantities, DELETE /api/cart/remove/{product_id} to remove specific items, and DELETE /api/cart/clear to clear the entire cart."
 
   - task: "Categories API"
     implemented: true
