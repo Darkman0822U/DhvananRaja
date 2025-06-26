@@ -137,15 +137,18 @@ backend:
 
   - task: "Categories API"
     implemented: true
-    working: "unknown"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "unknown"
         agent: "main"
         comment: "Implemented categories API to fetch distinct product categories from database."
+      - working: true
+        agent: "testing"
+        comment: "Categories API successfully returns all distinct categories from the products collection. Verified that Electronics, Fashion, and Home & Living categories are correctly returned."
 
   - task: "Orders API"
     implemented: true
